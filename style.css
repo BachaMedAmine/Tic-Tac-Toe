@@ -1,0 +1,100 @@
+/* Basic styling for the body */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Style the game title */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Style the mode selection buttons */
+#modeSelection button {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#modeSelection button:hover {
+    background-color: #45a049;
+}
+
+/* Styling the game board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+}
+
+/* Styling each cell */
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #000;
+    font-size: 3rem; /* Make the X and O large */
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+/* Styling the winning message box */
+.winning-message {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.winning-message.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling the restart button in the winning message */
+#restartButton {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#restartButton:hover {
+    background-color: #45a049;
+}
